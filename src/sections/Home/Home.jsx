@@ -29,7 +29,7 @@ function Home() {
           className={styles.box}
           onClick={() => handleClick({ route: "previous" })}
         >
-          Previous Design
+          Previous
         </div>
       </div>
     </div>
