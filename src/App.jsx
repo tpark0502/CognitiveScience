@@ -1,24 +1,27 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Login from "./sections/Login/Login";
 import Previous from "./sections/Previous/Previous";
 import Home from "./sections/Home/Home";
 import Body from "./sections/Body/Body";
 
-function App() {
-  const [count, setCount] = useState(0);
+const router = createBrowserRouter(
+  [
+    { path: "/", element: <Login /> },
+    { path: "/home", element: <Home /> },
+    { path: "/new-design", element: <Body /> },
+    { path: "/previous", element: <Previous /> },
+  ],
+  {
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    },
+  }
+);
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/new-design" element={<Body />} />
-        <Route path="/previous" element={<Previous />} />
-      </Routes>
-    </Router>
-  );
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
