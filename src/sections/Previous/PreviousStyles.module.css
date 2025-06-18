@@ -1,0 +1,8 @@
+.section {
+  height: 100%; /* or 100vh if full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+}
