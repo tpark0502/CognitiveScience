@@ -4,6 +4,7 @@ import Login from "./sections/Login/Login";
 import Previous from "./sections/Previous/Previous";
 import Home from "./sections/Home/Home";
 import Body from "./sections/Body/Body";
+import Community from "./sections/Community/Community";
 
 const router = createBrowserRouter(
   [
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
     { path: "/home", element: <Home /> },
     { path: "/new-design", element: <Body /> },
     { path: "/previous", element: <Previous /> },
+    { path: "/community", element: <Community /> },
   ],
   {
     future: {

@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.topRow}>
-        <h1 className={styles.heading}>MooMind</h1>
+        <h1>MooMind</h1>
         <div className={styles.div}>
           <p className={styles.p}>Creative</p>
           <p className={styles.p}>& Collaborative</p>
